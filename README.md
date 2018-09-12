@@ -1,4 +1,4 @@
-# React with Redux and Redux Saga Boilerplat
+# React with Redux and Redux Saga Boilerplate
 
 This is just a boilerplate to jumpstart the development process with React + Redux + Redux Saga
 
