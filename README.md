@@ -1,6 +1,6 @@
 # React with Redux and Redux Saga Boilerplate
 
-React boilerplate to jumpstart an app in seconds with React + Redux + Redux Saga.
+React boilerplate (bootstrapped with Create React App) to jumpstart an app in seconds with React + Redux + Redux Saga.
 
 ## Quickstart
 
