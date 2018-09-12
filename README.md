@@ -1,6 +1,12 @@
 # React with Redux and Redux Saga Boilerplate
 
-This is just a boilerplate to jumpstart the development process with React + Redux + Redux Saga
+React boilerplate to jumpstart an app in seconds with React + Redux + Redux Saga.
+
+## Quickstart
+
+1. Clone the repo
+2. Install the dependencies with `yarn install`
+3. Start the server with `yarn start`
 
 ### Demo
 
