@@ -4,8 +4,7 @@ import "./App.css";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { actions as fetchUsersActions } from "./sagas/fetchUsersSaga";
-import { types } from './sagas/fetchUsersSaga';
-
+import { types } from "./sagas/fetchUsersSaga";
 
 const { FETCH_USERS_CONFIRM } = types;
 
@@ -13,13 +12,13 @@ class App extends Component {
 	state = {
 		buttonText: "Load Users",
 		confirmHidden: true,
-    loadUsersHidden: false,
-    highlightColor: 'yellow'
+		loadUsersHidden: false,
+		highlightColor: "yellow"
 	};
 
 	handleFetchUsers = () => {
 		this.props.fetchUsersRequest();
-    this.setState({
+		this.setState({
 			confirmHidden: false,
 			loadUsersHidden: true,
 			buttonText: "Confirm",
@@ -28,11 +27,11 @@ class App extends Component {
 	};
 
 	handleConfirm = () => {
-    this.props.dispatch({ type: FETCH_USERS_CONFIRM });
-    this.setState({ 
-      confirmHidden: true, 
-      loadUsersHidden: false 
-    });
+		this.props.dispatch({ type: FETCH_USERS_CONFIRM });
+		this.setState({
+			confirmHidden: true,
+			loadUsersHidden: false
+		});
 	};
 
 	render() {
@@ -70,20 +69,25 @@ class App extends Component {
 					{users.length === 0 ? (
 						<h3>
 							{" "}
-              Click <span style={{ background: this.state.highlightColor }}>{this.state.buttonText}</span> to show some
-							users{" "}
+							Click{" "}
+							<span style={{ background: this.state.highlightColor }}>
+								{this.state.buttonText}
+							</span>{" "}
+							to show some users{" "}
 						</h3>
 					) : (
-            <div className="users">
-              {
-                users.map(user => {
-                  return <div key={user.id} className="user">
-											<img src={user.avatar_url} alt={user.login} />
-											<a href={user.html_url} target="_blank">{user.login}</a>
-										</div>;
-                })
-              }
-            </div>
+						<div className="users">
+							{users.map(user => {
+								return (
+									<div key={user.id} className="user">
+										<img src={user.avatar_url} alt={user.login} />
+										<a href={user.html_url} target="_blank">
+											{user.login}
+										</a>
+									</div>
+								);
+							})}
+						</div>
 					)}
 				</section>
 			</div>
